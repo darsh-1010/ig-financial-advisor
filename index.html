@@ -276,10 +276,12 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  <form id="f">
   <input name="name" placeholder="Your name" required>
   <input name="phone" type="tel" placeholder="Phone number" required>
+  <input name="email" type="email" placeholder="Email (optional)">
+  <input name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;padding:0;border:0">
   <select name="need"><option>Mutual funds &amp; SIPs</option><option>Insurance</option><option>Goal planning</option><option>Retirement</option><option>Tax-saving</option><option>Something else</option></select>
   <textarea name="msg" placeholder="Tell us a little about what you need"></textarea>
   <button class="btn" type="submit">Send enquiry →</button>
-  <p class="note">Opens your email app with your message pre-filled.</p>
+  <p class="note" id="fs" role="status" aria-live="polite">We usually reply within one working day.</p>
  </form>
 </div></div></section>
 </main>
@@ -296,9 +298,22 @@ document.getElementById('y').textContent=new Date().getFullYear();
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.15});
 document.querySelectorAll('.reveal,.st').forEach(el=>{el.classList.add('reveal');io.observe(el)});
 // ponytail: switch to https://wa.me/<number>?text= once the WhatsApp number is available
-document.getElementById('f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);
- const t=`Hi, I'm ${d.get('name')} (${d.get('phone')}). Interested in: ${d.get('need')}. ${d.get('msg')}`;
- location.href='mailto:info@igfinance.in?subject='+encodeURIComponent('Enquiry from website')+'&body='+encodeURIComponent(t)};
+// Enquiry form -> emailed to info@igfinance.in via FormSubmit (no backend needed).
+// First ever submission triggers an activation email to info@igfinance.in: click the link once.
+document.getElementById('f').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const f=e.target,btn=f.querySelector('button'),st=document.getElementById('fs'),d=Object.fromEntries(new FormData(f));
+ if(d._honey)return;
+ btn.disabled=true;btn.textContent='Sending…';
+ try{
+  const r=await fetch('https://formsubmit.co/ajax/info@igfinance.in',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+   body:JSON.stringify({Name:d.name,Phone:d.phone,Email:d.email||'—',Interested_in:d.need,Message:d.msg||'—',_subject:'New enquiry from igfinance website',_template:'table',_captcha:'false',_replyto:d.email||undefined})});
+  const j=await r.json();
+  if(!r.ok||j.success==='false'||j.success===false)throw 0;
+  f.reset();st.textContent='Thank you! We have received your enquiry and will contact you soon.';
+ }catch(_){st.textContent='Sorry, that did not go through. Please email us at info@igfinance.in.'}
+ btn.disabled=false;btn.textContent='Send enquiry →';
+});
 
 // motion
 (()=>{
