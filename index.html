@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Archivo+Narrow:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e0e0f;--card:#18181a;--line:#2a2a2d;--tx:#f4f1ec;--mut:#9a9a9f;--ac:#ff5a1f;--cream:#efe9df;--ink:#111}
+:root{--bg:#0a1020;--card:#121a2e;--line:#223052;--tx:#f2f6ff;--mut:#8d9bb8;--ac:#418DF9;--mint:#84EFC0;--cream:#eef5ff;--ink:#0a1020}
 *{box-sizing:border-box;margin:0}
 
 body{background:var(--bg);color:var(--tx);font:400 17px/1.6 Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -20,13 +20,13 @@ h1{font-size:clamp(46px,9vw,112px)}
 h2{font-size:clamp(34px,5.5vw,64px)}
 h3{font-size:22px;letter-spacing:0}
 .ac{color:var(--ac)}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:#fff;font-weight:600;padding:14px 26px;border-radius:99px;border:0;cursor:pointer;font-size:16px;transition:transform .2s}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:var(--ink);font-weight:600;padding:14px 26px;border-radius:99px;border:0;cursor:pointer;font-size:16px;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn.o{background:none;border:1px solid var(--line);color:var(--tx)}
 .tag{font:700 14px "Archivo Narrow",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);margin-bottom:16px;display:block}
 section{padding:96px 0}
 /* nav */
-header{position:sticky;top:0;z-index:9;background:rgba(14,14,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:9;background:rgba(10,16,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
 .logo img{width:44px;height:44px;border-radius:11px;background:#fff;padding:3px;object-fit:contain}
@@ -40,14 +40,14 @@ nav ul a:hover{color:var(--tx)}
 .stack{position:relative;height:420px}
 .pc{position:absolute;width:290px;height:180px;border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;font-weight:800;box-shadow:0 30px 60px #0008}
 .pc small{font-weight:500;opacity:.7;font-size:13px}
-.pc.a{background:var(--ac);right:0;top:10px;transform:rotate(8deg)}
-.pc.b{background:var(--cream);color:var(--ink);right:90px;top:120px;transform:rotate(-6deg)}
-.pc.c{background:#232326;border:1px solid var(--line);right:10px;top:235px;transform:rotate(3deg)}
+.pc.a{background:var(--ac);color:var(--ink);right:0;top:10px;transform:rotate(8deg)}
+.pc.b{background:var(--mint);color:var(--ink);right:90px;top:120px;transform:rotate(-6deg)}
+.pc.c{background:#16203a;border:1px solid var(--line);right:10px;top:235px;transform:rotate(3deg)}
 .pc span{font-size:26px;text-transform:uppercase;line-height:1}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px}
 .chips span{border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-size:14px;color:var(--mut)}
 /* marquee */
-.mq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;background:var(--ac);color:var(--ink)}
+.mq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;background:var(--mint);color:var(--ink)}
 .mq div{display:inline-block;animation:m 28s linear infinite;font:700 26px "Archivo Narrow";text-transform:uppercase;letter-spacing:.04em}
 @keyframes m{to{transform:translateX(-50%)}}
 /* about */
@@ -55,7 +55,7 @@ nav ul a:hover{color:var(--tx)}
 .about p{color:var(--mut);margin-top:20px}
 .cards2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .k{border-radius:24px;padding:28px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}
-.k.o{background:var(--ac)}
+.k.o{background:var(--mint);color:var(--ink)}
 .k.d{background:var(--card);border:1px solid var(--line)}
 .k.c{background:var(--cream);color:var(--ink);grid-column:span 2;min-height:150px}
 .k b{font:900 46px/1 Archivo;text-transform:uppercase}
@@ -68,7 +68,7 @@ nav ul a:hover{color:var(--tx)}
 .s h3{margin:36px 0 12px}
 .s p{color:var(--mut);font-size:15.5px}
 /* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line)}
 .st{padding:28px 24px 0 0}
 .st b{font:900 64px/1 Archivo;color:var(--line)}
 .st h3{margin:14px 0 8px;font-size:20px}
@@ -84,13 +84,13 @@ details p{color:var(--mut);margin-top:12px}
 .ct{background:var(--cream);color:var(--ink);border-radius:32px;padding:56px;display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
 .ct h2{color:var(--ink)}
 .ct dl{margin-top:30px;display:grid;gap:18px}
-.ct dt{font:700 13px "Archivo Narrow";letter-spacing:.12em;text-transform:uppercase;color:#777}
+.ct dt{font:700 13px "Archivo Narrow";letter-spacing:.12em;text-transform:uppercase;color:#5f6f8a}
 .ct dd{font-weight:600}
 form{display:grid;gap:12px}
-input,textarea,select{width:100%;font:inherit;padding:15px 18px;border-radius:14px;border:1px solid #cfc7ba;background:#fff;color:var(--ink)}
+input,textarea,select{width:100%;font:inherit;padding:15px 18px;border-radius:14px;border:1px solid #bcd0ee;background:#fff;color:var(--ink)}
 textarea{min-height:110px;resize:vertical}
 .map{margin-top:20px;border-radius:20px;overflow:hidden;border:0;width:100%;height:260px;filter:grayscale(.3)}
-.note{font-size:12.5px;color:#777;margin-top:4px}
+.note{font-size:12.5px;color:#5f6f8a;margin-top:4px}
 /* footer */
 footer{padding:48px 0 36px;border-top:1px solid var(--line);margin-top:96px;color:var(--mut);font-size:14px}
 footer .f{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
@@ -110,25 +110,25 @@ footer p{max-width:620px;margin-top:14px;font-size:12.5px}
 @keyframes flt{50%{translate:0 -14px}}
 .stack .pc{margin:0;transform-style:preserve-3d}
 .s{position:relative;overflow:hidden}
-.s::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#ff5a1f26,transparent 70%);opacity:0;transition:opacity .3s}
+.s::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#418df926,transparent 70%);opacity:0;transition:opacity .3s}
 .s:hover::before{opacity:1}
 .s>*{position:relative}
 .mq:hover div{animation-play-state:paused}
 .k{transition:transform .3s}.k:hover{transform:translateY(-6px) rotate(-1deg)}
-.chips span{transition:.25s}.chips span:hover{background:var(--ac);border-color:var(--ac);color:#fff}
+.chips span{transition:.25s}.chips span:hover{background:var(--ac);border-color:var(--ac);color:var(--ink)}
 .st b{transition:color .6s}.st.on b{color:var(--ac)}
 .reveal{transition-delay:calc(var(--d,0)*90ms)}
 @media(prefers-reduced-motion:reduce){.wd>i{transform:none}.pc{opacity:1;animation:none!important}}
 
 /* ref-style motion v2 */
 body{transition:background-color .7s,color .7s}
-body.light{--bg:#efe9df;--tx:#111;--card:#fff;--line:#d8d0c2;--mut:#5d5a55}
+body.light{--ac:#2b72e6;--bg:#eef5ff;--tx:#0a1020;--card:#fff;--line:#d3e0f3;--mut:#55627a}
 body.light .k.c{background:var(--ink);color:#fff}
 body.light .k.o{color:var(--ink)}
 body.light .btn.o{color:var(--tx)}
 header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 .spark{position:absolute;color:var(--ac);animation:spin 9s linear infinite}
-.spark.s1{width:70px;right:6%;top:40px}.spark.s2{width:34px;right:2%;top:110px;animation-duration:6s;animation-direction:reverse}
+.spark.s1{width:70px;right:6%;top:40px}.spark.s2{color:var(--mint);width:34px;right:2%;top:110px;animation-duration:6s;animation-direction:reverse}
 @keyframes spin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.25)}100%{transform:rotate(360deg) scale(1)}}
 .stack{transition:transform .25s ease-out;transform-style:preserve-3d}
 .lines{display:flex;justify-content:flex-end;gap:36px;margin-top:20px;flex-wrap:wrap}
@@ -146,13 +146,13 @@ header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 .sv:hover p,.sv:focus-within p{max-height:120px;opacity:1;margin-top:12px}
 .sv:hover h3{transform:translateX(10px);color:var(--ac)}
 .ar{width:46px;height:46px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;transition:.35s}
-.sv:hover .ar{background:var(--ac);color:#fff;transform:rotate(45deg);border-color:var(--ac)}
+.sv:hover .ar{background:var(--ac);color:var(--ink);transform:rotate(45deg);border-color:var(--ac)}
 @media(hover:none){.sv p{max-height:none;opacity:1;margin-top:10px}}
 .k b span{font-size:inherit;opacity:1}.k b sup{font:700 15px "Archivo Narrow";letter-spacing:.08em;margin-left:8px;vertical-align:middle;font-size:.4em;vertical-align:top;margin-left:4px}
-footer{background:linear-gradient(#0e0e0f 0%,#8c2f08 100%);margin-top:96px;padding-top:80px;border:0;color:#ffffffb0;overflow:hidden}
+footer{background:linear-gradient(#0a1020 0%,#1b4fa8 100%);margin-top:96px;padding-top:80px;border:0;color:#ffffffb0;overflow:hidden}
 footer b{color:#fff}
-.big{font:900 clamp(110px,26vw,360px)/.78 Archivo;text-transform:uppercase;color:var(--ac);letter-spacing:-.04em;transform-origin:50% 100%;
- text-shadow:1px 1px #e24d12,2px 2px #d84710,3px 3px #cf430f,4px 4px #c63f0e,5px 5px #bc3b0d,6px 6px #b2370c,7px 7px #a8330b,8px 8px #9e2f0a,9px 9px #942b09,10px 10px #8a2708;margin:0 0 40px;perspective:800px}
+.big{font:900 clamp(110px,26vw,360px)/.78 Archivo;text-transform:uppercase;color:var(--mint);letter-spacing:-.04em;transform-origin:50% 100%;
+ text-shadow:1px 1px #3a7fe6,2px 2px #3678dc,3px 3px #3271d2,4px 4px #2e6ac8,5px 5px #2a63be,6px 6px #275cb4,7px 7px #2355aa,8px 8px #1f4ea0,9px 9px #1b4796,10px 10px #17408c;margin:0 0 40px;perspective:800px}
 
 @media(prefers-reduced-motion:reduce){.spark{animation:none}.lines div::after{transform:none}}
 
@@ -267,12 +267,13 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 
 <section id="process" data-light style="padding-top:0"><div class="w">
  <span class="tag">How it works</span>
- <h2 class="reveal">Four steps. <span class="ac">No surprises.</span></h2>
+ <h2 class="reveal">Five steps. <span class="ac">No surprises.</span></h2>
  <div class="steps">
-  <div class="st"><b>01</b><h3>Talk</h3><p>A free first conversation about you and your goals.</p></div>
-  <div class="st"><b>02</b><h3>Plan</h3><p>We map income, expenses, risk and timelines.</p></div>
-  <div class="st"><b>03</b><h3>Invest</h3><p>We set things up and handle the paperwork.</p></div>
-  <div class="st"><b>04</b><h3>Review</h3><p>Regular reviews so the plan keeps up with life.</p></div>
+  <div class="st"><b>01</b><h3>Online application</h3><p>Fill out your basic details.</p></div>
+  <div class="st"><b>02</b><h3>Document submission</h3><p>Once we understand your needs, choose the option that suits you and upload the required documents.</p></div>
+  <div class="st"><b>03</b><h3>Verification</h3><p>We verify your application and the submitted documents.</p></div>
+  <div class="st"><b>04</b><h3>Approval</h3><p>Your application is reviewed and approved.</p></div>
+  <div class="st"><b>05</b><h3>Disbursal</h3><p>Funds are released or your investment is set up. Simple and efficient.</p></div>
  </div>
 </div></section>
 
@@ -434,7 +435,7 @@ const LOGO=new Image();LOGO.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA
 const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(35,1,.1,100);
 sc.add(new THREE.AmbientLight(0xffffff,.75));
 const dl=new THREE.DirectionalLight(0xffffff,1.1);dl.position.set(3,4,6);sc.add(dl);
-const pl=new THREE.PointLight(0xff5a1f,1.4,30);pl.position.set(-5,-2,5);sc.add(pl);
+const pl=new THREE.PointLight(0x418DF9,1.4,30);pl.position.set(-5,-2,5);sc.add(pl);
 function shape(w,h,q){const s=new THREE.Shape(),x=-w/2,y=-h/2;
  s.moveTo(x+q,y);s.lineTo(x+w-q,y);s.quadraticCurveTo(x+w,y,x+w,y+q);s.lineTo(x+w,y+h-q);s.quadraticCurveTo(x+w,y+h,x+w-q,y+h);
  s.lineTo(x+q,y+h);s.quadraticCurveTo(x,y+h,x,y+h-q);s.lineTo(x,y+q);s.quadraticCurveTo(x,y,x+q,y);return s}
@@ -451,16 +452,16 @@ function tex(o){const c=document.createElement('canvas');c.width=1024;c.height=6
   g.fillStyle=o.chip;g.fillRect(64,500,96,70);g.globalAlpha=.8;g.font='700 28px "Archivo Narrow",Archivo';g.fillStyle=o.fg;g.textAlign='right';g.fillText('AHMEDABAD',960,560);}
  const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=8;return t}
 const defs=[
- {a:'#ff6a2b',b:'#e0430f',fg:'#fff',chip:'#ffd9a8',tag:'FINANCIAL ADVISOR',logo:1,lines:[],size:230,y:380,pos:[.55,.95,.7],rz:-.1},
- {a:'#f3ede3',b:'#d9d0c0',fg:'#111',chip:'#c9a86a',tag:'PLAN',lines:['GOALS &','RETIREMENT'],size:112,y:290,pos:[-.95,-.55,0],rz:.09},
- {a:'#2a2a2e',b:'#121214',fg:'#fff',chip:'#8a8a90',tag:'PROTECT',lines:['FAMILY','COVER'],size:130,y:290,pos:[.9,-1.9,-.7],rz:-.04}];
+ {a:'#5aa0ff',b:'#2f78ea',fg:'#fff',chip:'#cfe5ff',tag:'FINANCIAL ADVISOR',logo:1,lines:[],size:230,y:380,pos:[.55,.95,.7],rz:-.1},
+ {a:'#9bf3cc',b:'#6fdcae',fg:'#0a1020',chip:'#e8fff4',tag:'PLAN',lines:['GOALS &','RETIREMENT'],size:112,y:290,pos:[-.95,-.55,0],rz:.09},
+ {a:'#1b2748',b:'#0c1327',fg:'#fff',chip:'#84EFC0',tag:'PROTECT',lines:['FAMILY','COVER'],size:130,y:290,pos:[.9,-1.9,-.7],rz:-.04}];
 const group=new THREE.Group();sc.add(group);
 const cards=defs.map(d=>{
  const m=new THREE.Group(),body=new THREE.Mesh(new THREE.ExtrudeGeometry(shape(W,H,.22),{depth:D,bevelEnabled:false}),new THREE.MeshStandardMaterial({color:d.a,roughness:.5}));
  body.position.z=-D/2;
  const mat=t=>new THREE.MeshStandardMaterial({map:t,roughness:.32,metalness:.15});
  const f=new THREE.Mesh(face(),mat(tex(d)));f.position.z=D/2+.002;
- const b=new THREE.Mesh(face(),mat(tex({a:'#18181a',b:'#0a0a0b',back:1})));b.position.z=-D/2-.002;b.rotation.y=Math.PI;
+ const b=new THREE.Mesh(face(),mat(tex({a:'#121a2e',b:'#0a0a0b',back:1})));b.position.z=-D/2-.002;b.rotation.y=Math.PI;
  m.add(body,f,b);m.position.set(...d.pos);m.rotation.z=d.rz;m.userData={base:d.pos[1],o:{y:rm?0:-8,rx:rm?0:1.2}};
  group.add(m);return m});
 group.rotation.set(.12,-.3,0);
