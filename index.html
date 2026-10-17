@@ -305,7 +305,6 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <h2>Let's talk about <span class="ac">your goals.</span></h2>
   <dl>
    <div><dt>Visit</dt><dd>Office No. 712, Block A, Dev Aurum,<br>Anand Nagar Char Rasta, Prahlad Nagar,<br>Ahmedabad, Gujarat 380015</dd></div>
-   <div><dt>Phone</dt><dd><a href="tel:+910000000000">+91 00000 00000</a></dd></div>
    <div><dt>Email</dt><dd><a href="mailto:info@igfinance.in">info@igfinance.in</a></dd></div>
   <div><dt>Follow</dt><dd><div class="soc"><a href="https://www.instagram.com/i.g.financial" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://youtube.com/@geeteshlalchandani" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/19gfzU2Kbc/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.300 0-3.8 1.400-3.800 3.900v2.300H7.900v3h2.600V21z"/></svg></a></div></dd></div>
   </dl>
@@ -316,8 +315,8 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <input name="phone" type="tel" placeholder="Phone number" required>
   <select name="need"><option>Mutual funds &amp; SIPs</option><option>Insurance</option><option>Goal planning</option><option>Retirement</option><option>Tax-saving</option><option>Something else</option></select>
   <textarea name="msg" placeholder="Tell us a little about what you need"></textarea>
-  <button class="btn" type="submit">Send on WhatsApp →</button>
-  <p class="note">Opens WhatsApp with your message pre-filled.</p>
+  <button class="btn" type="submit">Send enquiry →</button>
+  <p class="note">Opens your email app with your message pre-filled.</p>
  </form>
 </div></div></section>
 </main>
@@ -333,10 +332,10 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 document.getElementById('y').textContent=new Date().getFullYear();
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.15});
 document.querySelectorAll('.reveal,.st').forEach(el=>{el.classList.add('reveal');io.observe(el)});
-// ponytail: replace 910000000000 with the real WhatsApp number
+// ponytail: switch to https://wa.me/<number>?text= once the WhatsApp number is available
 document.getElementById('f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);
  const t=`Hi, I'm ${d.get('name')} (${d.get('phone')}). Interested in: ${d.get('need')}. ${d.get('msg')}`;
- open('https://wa.me/910000000000?text='+encodeURIComponent(t),'_blank')};
+ location.href='mailto:info@igfinance.in?subject='+encodeURIComponent('Enquiry from website')+'&body='+encodeURIComponent(t)};
 
 // motion
 (()=>{
