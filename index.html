@@ -132,10 +132,10 @@ header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 @keyframes spin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.25)}100%{transform:rotate(360deg) scale(1)}}
 .stack{transition:transform .25s ease-out;transform-style:preserve-3d}
 .lines{display:flex;justify-content:flex-end;gap:36px;margin-top:20px;flex-wrap:wrap}
-.lines div{width:190px;font-weight:600;font-size:15px;line-height:1.3;padding-bottom:12px;position:relative}
-.lines div::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform 1.1s .9s cubic-bezier(.2,.8,.2,1)}
-.go .lines div::after{transform:none}
-.lines div:nth-child(2)::after{transition-delay:1.1s}.lines div:nth-child(3)::after{transition-delay:1.3s}
+.lines a{display:block;width:190px;font-weight:600;font-size:15px;line-height:1.3;padding-bottom:12px;position:relative}
+.lines a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform 1.1s .9s cubic-bezier(.2,.8,.2,1)}
+.go .lines a::after{transform:none}
+.lines a:nth-child(2)::after{transition-delay:1.1s}.lines a:nth-child(3)::after{transition-delay:1.3s}
 .lines em{float:right;font-style:normal;color:var(--ac)}
 .rows{margin-top:48px}
 .sv{display:grid;grid-template-columns:84px 1fr 48px;gap:10px;padding:28px 0;border-top:1px solid var(--line);align-items:start;cursor:default}
@@ -154,7 +154,7 @@ footer b{color:#fff}
 .big{font:900 clamp(110px,26vw,360px)/.78 Archivo;text-transform:uppercase;color:var(--mint);letter-spacing:-.04em;transform-origin:50% 100%;
  text-shadow:1px 1px #3a7fe6,2px 2px #3678dc,3px 3px #3271d2,4px 4px #2e6ac8,5px 5px #2a63be,6px 6px #275cb4,7px 7px #2355aa,8px 8px #1f4ea0,9px 9px #1b4796,10px 10px #17408c;margin:0 0 40px;perspective:800px}
 
-@media(prefers-reduced-motion:reduce){.spark{animation:none}.lines div::after{transform:none}}
+@media(prefers-reduced-motion:reduce){.spark{animation:none}.lines a::after{transform:none}}
 
 /* v3: lenis / webgl */
 html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
@@ -202,7 +202,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <div class="pc a"><small>Grow</small><span>SIP &amp;<br>investments</span></div>
  </div>
  </div>
- <div class="lines"><div>Talk to us <em>↗</em></div><div>Get your plan <em>→</em></div><div>Start investing <em>↘</em></div></div>
+ <div class="lines"><a href="https://wa.me/919157861989" target="_blank" rel="noopener">Talk to us <em>↗</em></a><a href="#contact">Get your plan <em>→</em></a><a href="#services">Start investing <em>↘</em></a></div>
 </div></section>
 
 <div class="mq" aria-hidden="true"><div>Investments ✱ Insurance ✱ Retirement ✱ Tax saving ✱ Goal planning ✱ Investments ✱ Insurance ✱ Retirement ✱ Tax saving ✱ Goal planning ✱ </div></div>
