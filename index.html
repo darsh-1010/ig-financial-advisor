@@ -430,7 +430,7 @@ function tex(o){const c=document.createElement('canvas');c.width=1024;c.height=6
  const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=8;return t}
 const defs=[
  {a:'#5aa0ff',b:'#2f78ea',fg:'#fff',chip:'#cfe5ff',tag:'FINANCIAL ADVISOR',logo:1,lines:[],size:230,y:380,pos:[.55,.95,.7],rz:-.1},
- {a:'#9bf3cc',b:'#6fdcae',fg:'#0a1020',chip:'#e8fff4',tag:'BORROW',lines:['PERSONAL &','BIZ LOANS'],size:112,y:290,pos:[-.95,-.55,0],rz:.09},
+ {a:'#9bf3cc',b:'#6fdcae',fg:'#0a1020',chip:'#e8fff4',tag:'REFINANCE',lines:['USED CAR','LOANS'],size:112,y:290,pos:[-.95,-.55,0],rz:.09},
  {a:'#1b2748',b:'#0c1327',fg:'#fff',chip:'#84EFC0',tag:'PROTECT',lines:['CAR','INSURANCE'],size:130,y:290,pos:[.9,-1.9,-.7],rz:-.04}];
 const group=new THREE.Group();sc.add(group);
 const cards=defs.map(d=>{
