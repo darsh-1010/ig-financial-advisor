@@ -248,12 +248,6 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
    <p><a class="btn" href="tel:+919157861989">Call +91 91578 61989</a> <a class="btn o" href="https://wa.me/919157861989" target="_blank" rel="noopener">WhatsApp us</a></p>
   </div>
  </div>
- <ol class="tl">
-  <li class="reveal"><i>2014&ndash;18</i><h3>HDFC Bank</h3><p>Built a strong grounding in financial products, customer service and banking operations.</p></li>
-  <li class="reveal"><i>2018&ndash;22</i><h3>CarDekho</h3><p>Four years streamlining vehicle financing and scaling operations for smoother customer journeys.</p></li>
-  <li class="reveal"><i>2022&ndash;24</i><h3>Kuwy</h3><p>Drove strategy and strengthened lending partnerships in digital automotive lending.</p></li>
-  <li class="reveal now"><i>2024&ndash;now</i><h3>I.G. Financial Advisor</h3><p>Independent advice from Prahlad Nagar, working with multiple lenders to find what fits you.</p></li>
- </ol>
 </div></section>
 
 <section id="services" data-light style="padding-top:0"><div class="w">
@@ -299,7 +293,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <dl>
    <div><dt>Visit</dt><dd>Office No. 712, Block A, Dev Aurum,<br>Anand Nagar Char Rasta, Prahlad Nagar,<br>Ahmedabad, Gujarat 380015</dd></div>
    <div><dt>Phone / WhatsApp</dt><dd><a href="tel:+919157861989">+91 91578 61989</a></dd></div>
-   <div><dt>Email</dt><dd><a href="mailto:info@igfinance.in">info@igfinance.in</a></dd></div>
+   <div><dt>Email</dt><dd><a href="mailto:info@igfinancialadvisor.in">info@igfinancialadvisor.in</a></dd></div>
   <div><dt>Follow</dt><dd><div class="soc"><a href="https://www.instagram.com/i.g.financial" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://youtube.com/@geeteshlalchandani" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/19gfzU2Kbc/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.300 0-3.8 1.400-3.800 3.900v2.300H7.900v3h2.600V21z"/></svg></a><a href="https://www.linkedin.com/in/ig-financial-advisor-7b8284437" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 8.8H2.1V21h3.1zM3.7 3.5a1.8 1.8 0 100 3.600 1.8 1.8 0 000-3.600zM21.900 21v-6.700c0-3.300-1.800-4.800-4.100-4.800-1.900 0-2.700 1-3.200 1.800V8.800h-3.100c0 .8 0 12.200 0 12.200h3.100v-6.800c0-.4 0-.7.100-1 .3-.7 1-1.400 2.100-1.400 1.500 0 2.100 1.100 2.100 2.800V21z"/></svg></a><a href="https://wa.me/919157861989" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.600-5A9 9 0 1 1 8 19.400z"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a></div></dd></div>
   </dl>
   <iframe class="map" title="Office location" loading="lazy" src="https://maps.google.com/maps?q=Dev+Aurum+Prahlad+Nagar+Ahmedabad&output=embed"></iframe>
@@ -329,20 +323,20 @@ document.getElementById('y').textContent=new Date().getFullYear();
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.15});
 document.querySelectorAll('.reveal,.st').forEach(el=>{el.classList.add('reveal');io.observe(el)});
 // ponytail: switch to https://wa.me/<number>?text= once the WhatsApp number is available
-// Enquiry form -> emailed to info@igfinance.in via FormSubmit (no backend needed).
-// First ever submission triggers an activation email to info@igfinance.in: click the link once.
+// Enquiry form -> emailed to info@igfinancialadvisor.in via FormSubmit (no backend needed).
+// First ever submission triggers an activation email to info@igfinancialadvisor.in: click the link once.
 document.getElementById('f').addEventListener('submit',async e=>{
  e.preventDefault();
  const f=e.target,btn=f.querySelector('button'),st=document.getElementById('fs'),d=Object.fromEntries(new FormData(f));
  if(d._honey)return;
  btn.disabled=true;btn.textContent='Sending…';
  try{
-  const r=await fetch('https://formsubmit.co/ajax/info@igfinance.in',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+  const r=await fetch('https://formsubmit.co/ajax/info@igfinancialadvisor.in',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
    body:JSON.stringify({Name:d.name,Phone:d.phone,Email:d.email||'—',Interested_in:d.need,Message:d.msg||'—',_subject:'New enquiry from igfinance website',_template:'table',_captcha:'false',_replyto:d.email||undefined})});
   const j=await r.json();
   if(!r.ok||j.success==='false'||j.success===false)throw 0;
   f.reset();st.textContent='Thank you! We have received your enquiry and will contact you soon.';
- }catch(_){st.textContent='Sorry, that did not go through. Please email us at info@igfinance.in.'}
+ }catch(_){st.textContent='Sorry, that did not go through. Please email us at info@igfinancialadvisor.in.'}
  btn.disabled=false;btn.textContent='Send enquiry →';
 });
 
