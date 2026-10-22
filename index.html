@@ -61,6 +61,20 @@ nav ul a:hover{color:var(--tx)}
 .k.c{background:var(--cream);color:var(--ink);grid-column:span 2;min-height:150px}
 .k b{font:900 46px/1 Archivo;text-transform:uppercase}
 .k span{font-size:15px;opacity:.85}
+.fd{display:grid;grid-template-columns:minmax(0,.8fr) 1.2fr;gap:56px;align-items:center}
+.fd figure{margin:0;position:relative}.fd img{width:100%;display:block;border-radius:28px;aspect-ratio:4/5;object-fit:cover;object-position:top}
+.fd figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(10,16,32,.85);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;display:flex;flex-direction:column;color:#fff}
+.fd figcaption span{font-size:14px;opacity:.75}
+.fd p{color:var(--mut);margin-top:20px}
+.fs{display:flex;gap:36px;margin:28px 0;padding:20px 0;border-block:1px solid var(--line)}
+.fs b{display:block;font:900 38px/1 Archivo;color:var(--ac)}.fs span{font-size:14px;color:var(--mut)}
+.tl{list-style:none;padding:0;margin:64px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.tl li{border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--card);position:relative}
+.tl li.now{border-color:var(--ac)}
+.tl i{font:700 14px "Archivo Narrow";font-style:normal;color:var(--ac);letter-spacing:.1em}
+.tl h3{margin:14px 0 8px;font-size:20px}.tl p{color:var(--mut);font-size:15px}
+@media(max-width:900px){.fd{grid-template-columns:1fr;gap:32px}.tl{grid-template-columns:1fr 1fr}.fs{gap:24px}}
+@media(max-width:520px){.tl{grid-template-columns:1fr}}
 /* services */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 .s{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;transition:.25s}
@@ -223,21 +237,23 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 </div></section>
 
 <section id="owner" data-light style="padding-top:0"><div class="w">
- <span class="tag">Meet the founder</span>
- <h2 class="reveal">Hello, I'm <span class="ac">Geetesh Lalchandani.</span></h2>
- <div class="about" style="margin-top:32px">
+ <div class="fd">
+  <figure class="reveal"><img src="owner.jpg" alt="Geetesh Lalchandani, founder of I.G. Financial Advisor"><figcaption><b>Geetesh Lalchandani</b><span>Founder, I.G. Financial Advisor</span></figcaption></figure>
   <div class="reveal">
-   <img src="owner.jpg" alt="Geetesh Lalchandani, founder of I.G. Financial Advisor" style="width:100%;max-width:340px;border-radius:20px;display:block;margin-bottom:24px">
-   <p style="margin-top:0">Founder and owner of I.G. Financial Advisor, Ahmedabad. Originally from Kanpur, Uttar Pradesh, I moved to Ahmedabad in 2002 and over two decades Gujarat has become home &mdash; where I built my career, my friendships and my business. With a B.Com degree, I started with a strong foundation in commerce and business principles.</p>
-   <p>After a decade across banking and automotive fintech, I founded I.G. Financial Advisor in 2024 in Prahlad Nagar. My mission is simple: bring transparency, expert guidance and customised financial solutions to individuals and businesses, so you can reach your goals with confidence.</p>
+   <span class="tag">Meet the founder</span>
+   <h2>A decade inside banks and car finance, <span class="ac">now working for you.</span></h2>
+   <p>I moved to Ahmedabad from Kanpur in 2002, and Gujarat has been home ever since. With a B.Com degree and ten years across banking and automotive fintech, I saw how lending really works from the lender's side &mdash; and started I.G. Financial Advisor in 2024 to put that knowledge on the customer's side of the table.</p>
+   <p>My promise is simple: transparency, expert guidance and solutions built around you.</p>
+   <div class="fs"><div><b>10+</b><span>years in finance</span></div><div><b>3</b><span>leading employers</span></div><div><b>2024</b><span>I.G. founded</span></div></div>
    <p><a class="btn" href="tel:+919157861989">Call +91 91578 61989</a> <a class="btn o" href="https://wa.me/919157861989" target="_blank" rel="noopener">WhatsApp us</a></p>
   </div>
-  <div class="rows" style="margin-top:0">
-   <div class="sv reveal" tabindex="0"><i>2014&ndash;18</i><div><h3>HDFC Bank</h3><p>Built a robust understanding of financial products, customer service and banking operations.</p></div><span class="ar">&rarr;</span></div>
-   <div class="sv reveal" tabindex="0"><i>2018&ndash;22</i><div><h3>CarDekho</h3><p>Four years streamlining vehicle financing and scaling operations for seamless customer experiences.</p></div><span class="ar">&rarr;</span></div>
-   <div class="sv reveal" tabindex="0"><i>2022&ndash;24</i><div><h3>Kuwy</h3><p>Drove strategic initiatives and strengthened lending partnerships in digital automotive lending.</p></div><span class="ar">&rarr;</span></div>
-  </div>
  </div>
+ <ol class="tl">
+  <li class="reveal"><i>2014&ndash;18</i><h3>HDFC Bank</h3><p>Built a strong grounding in financial products, customer service and banking operations.</p></li>
+  <li class="reveal"><i>2018&ndash;22</i><h3>CarDekho</h3><p>Four years streamlining vehicle financing and scaling operations for smoother customer journeys.</p></li>
+  <li class="reveal"><i>2022&ndash;24</i><h3>Kuwy</h3><p>Drove strategy and strengthened lending partnerships in digital automotive lending.</p></li>
+  <li class="reveal now"><i>2024&ndash;now</i><h3>I.G. Financial Advisor</h3><p>Independent advice from Prahlad Nagar, working with multiple lenders to find what fits you.</p></li>
+ </ol>
 </div></section>
 
 <section id="services" data-light style="padding-top:0"><div class="w">
