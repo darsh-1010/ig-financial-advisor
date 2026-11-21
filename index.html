@@ -58,7 +58,6 @@ nav ul a:hover{color:var(--tx)}
 .k{border-radius:24px;padding:28px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}
 .k.o{background:var(--mint);color:var(--ink)}
 .k.d{background:var(--card);border:1px solid var(--line)}
-.k.c{background:var(--cream);color:var(--ink);grid-column:span 2;min-height:150px}
 .k b{font:900 46px/1 Archivo;text-transform:uppercase}
 .k span{font-size:15px;opacity:.85}
 .fd{display:grid;grid-template-columns:minmax(0,.8fr) 1.2fr;gap:56px;align-items:center}
@@ -121,7 +120,6 @@ footer p{max-width:620px;margin-top:14px;font-size:12.5px}
 @media(prefers-reduced-motion:reduce){.wd>i{transform:none}.pc{opacity:1;animation:none!important}}
 
 /* ref-style motion v2 */
-.k.c{background:var(--ink);color:#fff}
 header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 .spark{position:absolute;color:var(--ac);animation:spin 9s linear infinite}
 .spark.s1{width:70px;right:6%;top:40px}.spark.s2{color:var(--mint);width:34px;right:2%;top:110px;animation-duration:6s;animation-direction:reverse}
@@ -144,7 +142,6 @@ header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 .ar{width:46px;height:46px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;transition:.35s}
 .sv:hover .ar{background:var(--ac);color:var(--ink);transform:rotate(45deg);border-color:var(--ac)}
 @media(hover:none){.sv p{max-height:none;opacity:1;margin-top:10px}}
-.k b span{font-size:inherit;opacity:1}.k b sup{font:700 15px "Archivo Narrow";letter-spacing:.08em;margin-left:8px;vertical-align:middle;font-size:.4em;vertical-align:top;margin-left:4px}
 footer{margin-top:96px;padding-top:80px;overflow:hidden}
 footer b{color:var(--ink)}
 .big{font:900 clamp(110px,26vw,360px)/.78 Archivo;text-transform:uppercase;color:var(--ac);letter-spacing:-.04em;transform-origin:50% 100%;
@@ -211,8 +208,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  </div>
  <div class="cards2 reveal">
   <div class="k o"><b>1:1</b><span>Personal attention — you deal directly with your advisor.</span></div>
-  <div class="k d"><b class="ac"><span data-count="4">4</span><sup>services</sup></b><span>Car loans, insurance, loans and cards under one roof.</span></div>
-  <div class="k c"><b>Ahmedabad</b><span>Office 712, Dev Aurum, Prahlad Nagar — easy to visit, easy to reach.</span></div>
+  <div class="k d"><b class="ac">Multiple services</b><span>Car loans, insurance, personal loans and cards under one roof.</span></div>
  </div>
 </div></section>
 
@@ -222,8 +218,8 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <div class="reveal">
    <span class="tag">Meet the founder</span>
    <h2>A decade inside banks and car finance, <span class="ac">now working for you.</span></h2>
-   <p>I moved to Ahmedabad from Kanpur in 2002, and Gujarat has been home ever since. With a B.Com degree and ten years across banking and automotive fintech, I saw how lending really works from the lender's side &mdash; and started I.G. Financial Advisor in 2024 to put that knowledge on the customer's side of the table.</p>
-   <p>My promise is simple: transparency, expert guidance and solutions built around you.</p>
+   <p>Hello, and welcome! I am Geetesh Lalchandani, the founder and owner of I.G. Financial Advisor, based in the vibrant city of Ahmedabad, Gujarat.</p>
+   <p>My journey combines deep-rooted financial expertise, extensive corporate banking and automotive-fintech experience.</p>
    <div class="fs"><div><b>10+</b><span>years in finance</span></div><div><b>3</b><span>leading employers</span></div><div><b>2024</b><span>I.G. founded</span></div></div>
    <p><a class="btn" href="tel:+919157861989">Call +91 91578 61989</a> <a class="btn o" href="https://wa.me/919157861989" target="_blank" rel="noopener">WhatsApp us</a></p>
   </div>
@@ -341,11 +337,6 @@ document.querySelectorAll('.rows,.steps,.cards2').forEach(g=>[...g.children].for
 // scroll progress
 const bar=document.getElementById('bar');
 addEventListener('scroll',()=>bar.style.transform=`scaleX(${scrollY/(document.documentElement.scrollHeight-innerHeight)})`,{passive:true});
-
-// count-up
-const cio=new IntersectionObserver(e=>e.forEach(x=>{if(!x.isIntersecting)return;cio.unobserve(x.target);const to=+x.target.dataset.count,t0=performance.now();
- (function f(t){const p=Math.min((t-t0)/1400,1);x.target.textContent=Math.round(to*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(f)})(t0)}),{threshold:.6});
-document.querySelectorAll('[data-count]').forEach(el=>{el.textContent=0;cio.observe(el)});
 if(rm)return;
 // hero cards parallax
 const st=document.querySelector('.stack');
