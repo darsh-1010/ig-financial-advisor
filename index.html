@@ -168,6 +168,8 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  .ct{padding:30px 22px}
  section{padding:64px 0}
 }
+.btn{white-space:nowrap}
+@media(max-width:520px){nav{gap:10px}.logo{font-size:15px;gap:8px;min-width:0}.logo img{width:36px;height:36px}header .btn{padding:10px 16px;font-size:14px}}
 @media(prefers-reduced-motion:reduce){.mq div{animation:none}.reveal{opacity:1;transform:none}}
 </style>
 </head>
@@ -401,8 +403,7 @@ function tex(o){const c=document.createElement('canvas');c.width=1024;c.height=6
  const gr=g.createLinearGradient(0,0,1024,646);gr.addColorStop(0,o.a);gr.addColorStop(1,o.b);g.fillStyle=gr;g.fillRect(0,0,1024,646);
  if(o.back){g.fillStyle='#000';g.fillRect(0,90,1024,110);g.fillStyle='#ffffffaa';g.font='700 30px "Archivo Narrow",Archivo';g.fillText('I.G. FINANCIAL ADVISOR · AHMEDABAD',64,560)}
  else{
-  const sh=g.createLinearGradient(0,0,1024,0);sh.addColorStop(0,'#fff0');sh.addColorStop(.5,'#ffffff1f');sh.addColorStop(1,'#fff0');g.fillStyle=sh;g.fillRect(0,0,1024,646);
-  g.fillStyle=o.fg;g.globalAlpha=.8;g.font='700 32px "Archivo Narrow",Archivo';g.fillText(o.tag,64,96);g.globalAlpha=1;
+    g.fillStyle=o.fg;g.globalAlpha=.8;g.font='700 32px "Archivo Narrow",Archivo';g.fillText(o.tag,64,96);g.globalAlpha=1;
   if(o.logo){g.fillStyle='#fff';g.beginPath();g.roundRect?g.roundRect(60,130,330,330,44):g.rect(60,130,330,330);g.fill();if(LOGO.complete)g.drawImage(LOGO,72,142,306,306)}
   else{g.font='900 '+o.size+'px Archivo';o.lines.forEach((l,i)=>g.fillText(l,60,o.y+i*o.size*.92))}
   g.fillStyle=o.chip;g.fillRect(64,500,96,70);g.globalAlpha=.8;g.font='700 28px "Archivo Narrow",Archivo';g.fillStyle=o.fg;g.textAlign='right';g.fillText('AHMEDABAD',960,560);}
@@ -415,7 +416,7 @@ const group=new THREE.Group();sc.add(group);
 const cards=defs.map(d=>{
  const m=new THREE.Group(),body=new THREE.Mesh(new THREE.ExtrudeGeometry(shape(W,H,.22),{depth:D,bevelEnabled:false}),new THREE.MeshStandardMaterial({color:d.a,roughness:.5}));
  body.position.z=-D/2;
- const mat=t=>new THREE.MeshStandardMaterial({map:t,roughness:.32,metalness:.15});
+ const mat=t=>new THREE.MeshStandardMaterial({map:t,roughness:1,metalness:0});
  const f=new THREE.Mesh(face(),mat(tex(d)));f.position.z=D/2+.002;
  const b=new THREE.Mesh(face(),mat(tex({a:'#121a2e',b:'#0a0a0b',back:1})));b.position.z=-D/2-.002;b.rotation.y=Math.PI;
  m.add(body,f,b);m.position.set(...d.pos);m.rotation.z=d.rz;m.userData={base:d.pos[1],o:{y:rm?0:-8,rx:rm?0:1.2}};
