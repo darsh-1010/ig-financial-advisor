@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Archivo+Narrow:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a1020;--card:#121a2e;--line:#223052;--tx:#f2f6ff;--mut:#8d9bb8;--ac:#418DF9;--mint:#84EFC0;--cream:#eef5ff;--ink:#0a1020}
+:root{--bg:#fff;--card:#fff;--line:#d3e0f3;--tx:#0a1020;--mut:#55627a;--ac:#2b72e6;--mint:#84EFC0;--cream:#eef5ff;--ink:#0a1020}
 *{box-sizing:border-box;margin:0}
 
 body{background:var(--bg);color:var(--tx);font:400 17px/1.6 Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -37,7 +37,7 @@ nav ul a:hover{color:var(--tx)}
 .hero{padding:72px 0 40px;position:relative;overflow:hidden}
 .hero p.lead{max-width:520px;color:var(--mut);font-size:19px;margin:28px 0 34px}
 .hero .row{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
-.stack{position:relative;height:420px}
+.stack{position:relative;height:540px}
 .pc{position:absolute;width:290px;height:180px;border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;font-weight:800;box-shadow:0 30px 60px #0008}
 .pc small{font-weight:500;opacity:.7;font-size:13px}
 .pc.a{background:var(--ac);color:var(--ink);right:0;top:10px;transform:rotate(8deg)}
@@ -49,7 +49,7 @@ nav ul a:hover{color:var(--tx)}
 /* marquee */
 .mq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;background:var(--mint);color:var(--ink)}
 .mq div{display:inline-block;animation:m 70s linear infinite;font:700 26px "Archivo Narrow";text-transform:uppercase;letter-spacing:.04em}
-.mq .lg{display:inline-flex;align-items:center;justify-content:center;height:64px;min-width:150px;padding:0 20px;margin:0 12px;background:#fff;border-radius:12px;vertical-align:middle}.mq img{height:40px;width:auto;max-width:140px;object-fit:contain}.mq .lg b{font:800 17px Archivo;text-transform:none;letter-spacing:0;color:#0a1020}
+.mq .lg{display:inline-flex;align-items:center;justify-content:center;height:64px;min-width:150px;padding:0 20px;margin:0 12px;vertical-align:middle}.mq img{mix-blend-mode:multiply;height:40px;width:auto;max-width:140px;object-fit:contain}.mq .lg b{font:800 17px Archivo;text-transform:none;letter-spacing:0;color:#0a1020}
 @keyframes m{to{transform:translateX(-50%)}}
 /* about */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -68,20 +68,8 @@ nav ul a:hover{color:var(--tx)}
 .fd p{color:var(--mut);margin-top:20px}
 .fs{display:flex;gap:36px;margin:28px 0;padding:20px 0;border-block:1px solid var(--line)}
 .fs b{display:block;font:900 38px/1 Archivo;color:var(--ac)}.fs span{font-size:14px;color:var(--mut)}
-.tl{list-style:none;padding:0;margin:64px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
-.tl li{border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--card);position:relative}
-.tl li.now{border-color:var(--ac)}
-.tl i{font:700 14px "Archivo Narrow";font-style:normal;color:var(--ac);letter-spacing:.1em}
-.tl h3{margin:14px 0 8px;font-size:20px}.tl p{color:var(--mut);font-size:15px}
-@media(max-width:900px){.fd{grid-template-columns:1fr;gap:32px}.tl{grid-template-columns:1fr 1fr}.fs{gap:24px}}
-@media(max-width:520px){.tl{grid-template-columns:1fr}}
+@media(max-width:900px){.fd{grid-template-columns:1fr;gap:32px}.fs{gap:24px}}
 /* services */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
-.s{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;transition:.25s}
-.s:hover{border-color:var(--ac);transform:translateY(-4px)}
-.s i{font:700 14px "Archivo Narrow";color:var(--ac);font-style:normal;letter-spacing:.1em}
-.s h3{margin:36px 0 12px}
-.s p{color:var(--mut);font-size:15.5px}
 /* process */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px;border-top:1px solid var(--line)}
 .st{padding:28px 24px 0 0}
@@ -109,7 +97,7 @@ textarea{min-height:110px;resize:vertical}
 /* footer */
 footer{padding:48px 0 36px;border-top:1px solid var(--line);margin-top:96px;color:var(--mut);font-size:14px}
 footer .f{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
-.ai{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px;font-size:14px}.ai a{display:inline-flex;border:1px solid #ffffff55;border-radius:99px;padding:9px 14px;color:#fff;transition:.2s}.ai img{filter:invert(1)}.ai a:hover{background:#fff}.ai a:hover img{filter:none}
+.ai{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px;font-size:14px}.ai a{display:inline-flex;border:1px solid var(--line);border-radius:99px;padding:9px 14px;color:var(--ink);transition:.2s}.ai a:hover{background:var(--cream)}
 footer p{max-width:620px;margin-top:14px;font-size:12.5px}
 .reveal{opacity:0;transform:translateY(24px);transition:.7s}
 .reveal.on{opacity:1;transform:none}
@@ -125,10 +113,6 @@ footer p{max-width:620px;margin-top:14px;font-size:12.5px}
 @keyframes fly{from{opacity:0;translate:0 140px;scale:.85}to{opacity:1;translate:0 0;scale:1}}
 @keyframes flt{50%{translate:0 -14px}}
 .stack .pc{margin:0;transform-style:preserve-3d}
-.s{position:relative;overflow:hidden}
-.s::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#418df926,transparent 70%);opacity:0;transition:opacity .3s}
-.s:hover::before{opacity:1}
-.s>*{position:relative}
 .mq:hover div{animation-play-state:paused}
 .k{transition:transform .3s}.k:hover{transform:translateY(-6px) rotate(-1deg)}
 .chips span{transition:.25s}.chips span:hover{background:var(--ac);border-color:var(--ac);color:var(--ink)}
@@ -137,11 +121,7 @@ footer p{max-width:620px;margin-top:14px;font-size:12.5px}
 @media(prefers-reduced-motion:reduce){.wd>i{transform:none}.pc{opacity:1;animation:none!important}}
 
 /* ref-style motion v2 */
-body{transition:background-color .7s,color .7s}
-body.light{--ac:#2b72e6;--bg:#eef5ff;--tx:#0a1020;--card:#fff;--line:#d3e0f3;--mut:#55627a}
-body.light .k.c{background:var(--ink);color:#fff}
-body.light .k.o{color:var(--ink)}
-body.light .btn.o{color:var(--tx)}
+.k.c{background:var(--ink);color:#fff}
 header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 .spark{position:absolute;color:var(--ac);animation:spin 9s linear infinite}
 .spark.s1{width:70px;right:6%;top:40px}.spark.s2{color:var(--mint);width:34px;right:2%;top:110px;animation-duration:6s;animation-direction:reverse}
@@ -165,9 +145,9 @@ header{background:color-mix(in srgb,var(--bg) 85%,transparent)}
 .sv:hover .ar{background:var(--ac);color:var(--ink);transform:rotate(45deg);border-color:var(--ac)}
 @media(hover:none){.sv p{max-height:none;opacity:1;margin-top:10px}}
 .k b span{font-size:inherit;opacity:1}.k b sup{font:700 15px "Archivo Narrow";letter-spacing:.08em;margin-left:8px;vertical-align:middle;font-size:.4em;vertical-align:top;margin-left:4px}
-footer{background:linear-gradient(#0a1020 0%,#1b4fa8 100%);margin-top:96px;padding-top:80px;border:0;color:#ffffffb0;overflow:hidden}
-footer b{color:#fff}
-.big{font:900 clamp(110px,26vw,360px)/.78 Archivo;text-transform:uppercase;color:var(--mint);letter-spacing:-.04em;transform-origin:50% 100%;
+footer{margin-top:96px;padding-top:80px;overflow:hidden}
+footer b{color:var(--ink)}
+.big{font:900 clamp(110px,26vw,360px)/.78 Archivo;text-transform:uppercase;color:var(--ac);letter-spacing:-.04em;transform-origin:50% 100%;
  text-shadow:1px 1px #3a7fe6,2px 2px #3678dc,3px 3px #3271d2,4px 4px #2e6ac8,5px 5px #2a63be,6px 6px #275cb4,7px 7px #2355aa,8px 8px #1f4ea0,9px 9px #1b4796,10px 10px #17408c;margin:0 0 40px;perspective:800px}
 
 @media(prefers-reduced-motion:reduce){.spark{animation:none}.lines a::after{transform:none}}
@@ -186,9 +166,8 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 @media(max-width:860px){
  nav ul{display:none}
  .hero .row,.about,.ct{grid-template-columns:1fr}
- .grid{grid-template-columns:1fr}
  .steps{grid-template-columns:1fr 1fr}.lines{justify-content:flex-start}.sv{grid-template-columns:70px 1fr 40px}
- .stack{height:380px}
+ .stack{height:480px}
  .ct{padding:30px 22px}
  section{padding:64px 0}
 }
@@ -223,7 +202,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 
 <div class="mq" aria-hidden="true"><div><span class="lg"><img src="logos/icici.svg" alt="ICICI Bank" height="40"></span><span class="lg"><img src="logos/bajaj.svg" alt="Bajaj Finance" height="40"></span><span class="lg"><img src="logos/axis.svg" alt="Axis Bank" height="40"></span><span class="lg"><img src="logos/au.svg" alt="AU Small Finance Bank" height="40"></span><span class="lg"><img src="logos/hdfc.svg" alt="HDFC Bank" height="40"></span><span class="lg"><img src="logos/chola.svg" alt="Chola" height="40"></span><span class="lg"><img src="logos/yes.svg" alt="Yes Bank" height="40"></span><span class="lg"><img src="logos/hero.png" alt="HeroFinCorp" height="40"></span><span class="lg"><img src="logos/tata.jpg" alt="Tata Capital" height="40"></span><span class="lg"><img src="logos/idfc.svg" alt="IDFC First Bank" height="40"></span><span class="lg"><img src="logos/poonawalla.svg" alt="Poonawalla Fincorp" height="40"></span><span class="lg"><img src="logos/sk.png" alt="SK Finance" height="40"></span><span class="lg" style="background:#14143c"><img src="logos/piramal.png" alt="Piramal Finance" height="40"></span><span class="lg"><img src="logos/mahindra.svg" alt="Mahindra &amp; Mahindra Finance" height="40"></span><span class="lg"><img src="logos/icici.svg" alt="ICICI Bank" height="40"></span><span class="lg"><img src="logos/bajaj.svg" alt="Bajaj Finance" height="40"></span><span class="lg"><img src="logos/axis.svg" alt="Axis Bank" height="40"></span><span class="lg"><img src="logos/au.svg" alt="AU Small Finance Bank" height="40"></span><span class="lg"><img src="logos/hdfc.svg" alt="HDFC Bank" height="40"></span><span class="lg"><img src="logos/chola.svg" alt="Chola" height="40"></span><span class="lg"><img src="logos/yes.svg" alt="Yes Bank" height="40"></span><span class="lg"><img src="logos/hero.png" alt="HeroFinCorp" height="40"></span><span class="lg"><img src="logos/tata.jpg" alt="Tata Capital" height="40"></span><span class="lg"><img src="logos/idfc.svg" alt="IDFC First Bank" height="40"></span><span class="lg"><img src="logos/poonawalla.svg" alt="Poonawalla Fincorp" height="40"></span><span class="lg"><img src="logos/sk.png" alt="SK Finance" height="40"></span><span class="lg" style="background:#14143c"><img src="logos/piramal.png" alt="Piramal Finance" height="40"></span><span class="lg"><img src="logos/mahindra.svg" alt="Mahindra &amp; Mahindra Finance" height="40"></span></div></div>
 
-<section id="about" data-light><div class="w about">
+<section id="about"><div class="w about">
  <div class="reveal">
   <span class="tag">About us</span>
   <h2>Money advice that sits <span class="ac">across the table</span> from you.</h2>
@@ -237,7 +216,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  </div>
 </div></section>
 
-<section id="owner" data-light style="padding-top:0"><div class="w">
+<section id="owner" style="padding-top:0"><div class="w">
  <div class="fd">
   <figure class="reveal"><img src="owner.jpg" alt="Geetesh Lalchandani, founder of I.G. Financial Advisor"><figcaption><b>Geetesh Lalchandani</b><span>Founder, I.G. Financial Advisor</span></figcaption></figure>
   <div class="reveal">
@@ -251,7 +230,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  </div>
 </div></section>
 
-<section id="services" data-light style="padding-top:0"><div class="w">
+<section id="services" style="padding-top:0"><div class="w">
  <span class="tag">What we do</span>
  <h2 class="reveal">Our <span class="ac">services.</span></h2>
  <div class="rows">
@@ -262,7 +241,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  </div>
 </div></section>
 
-<section id="process" data-light style="padding-top:0"><div class="w">
+<section id="process" style="padding-top:0"><div class="w">
  <span class="tag">How it works</span>
  <h2 class="reveal">Five steps. <span class="ac">No surprises.</span></h2>
  <div class="steps">
@@ -278,7 +257,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
  <span class="tag">Questions</span>
  <h2>Good to know.</h2>
  <div class="faq">
-  <details><summary>Where is your office?</summary><p>Office No. 712, Block A, Dev Aurum, Anand Nagar Char Rasta, Prahlad Nagar, Ahmedabad 380015.</p></details>
+  <details><summary>Where is your office?</summary><p>Office No. 712, Block A, Dev Aurum, Anand Nagar Cross Roads, Prahlad Nagar, Ahmedabad 380015.</p></details>
   <details><summary>Can I get a car loan, and how much?</summary><p>Yes, we can help you apply. The amount you can borrow depends on the lender, your income, your credit score and the car you choose. We'll tell you what's realistic before you apply.</p></details>
   <details><summary>How long does car loan approval take?</summary><p>It depends on the lender and how quickly your documents are verified. Complete, correct documents are the best way to speed it up, and we'll keep you updated at every step.</p></details>
   <details><summary>What documents are required for a car loan?</summary><p>Usually identity and address proof (Aadhaar and PAN), income proof such as salary slips or ITR, recent bank statements, and the car's quotation. The exact list can vary by lender.</p></details>
@@ -292,7 +271,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <span class="tag">Contact</span>
   <h2>Let's talk about <span class="ac">your goals.</span></h2>
   <dl>
-   <div><dt>Visit</dt><dd>Office No. 712, Block A, Dev Aurum,<br>Anand Nagar Char Rasta, Prahlad Nagar,<br>Ahmedabad, Gujarat 380015</dd></div>
+   <div><dt>Visit</dt><dd>Office No. 712, Block A, Dev Aurum,<br>Anand Nagar Cross Roads, Prahlad Nagar,<br>Ahmedabad, Gujarat 380015</dd></div>
    <div><dt>Phone / WhatsApp</dt><dd><a href="tel:+919157861989">+91 91578 61989</a></dd></div>
    <div><dt>Email</dt><dd><a href="mailto:info@igfinancialadvisor.in">info@igfinancialadvisor.in</a></dd></div>
   <div><dt>Follow</dt><dd><div class="soc"><a href="https://www.instagram.com/i.g.financial" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://youtube.com/@geeteshlalchandani" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/19gfzU2Kbc/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.300 0-3.8 1.400-3.800 3.900v2.300H7.900v3h2.600V21z"/></svg></a><a href="https://www.linkedin.com/in/ig-financial-advisor-7b8284437" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 8.8H2.1V21h3.1zM3.7 3.5a1.8 1.8 0 100 3.600 1.8 1.8 0 000-3.600zM21.900 21v-6.700c0-3.300-1.800-4.800-4.100-4.800-1.900 0-2.700 1-3.200 1.800V8.800h-3.100c0 .8 0 12.200 0 12.200h3.100v-6.800c0-.4 0-.7.100-1 .3-.7 1-1.400 2.100-1.400 1.500 0 2.100 1.100 2.100 2.800V21z"/></svg></a><a href="https://wa.me/919157861989" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.600-5A9 9 0 1 1 8 19.400z"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a></div></dd></div>
@@ -313,9 +292,9 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 </main>
 
 <footer><div class="w"><div class="big" aria-hidden="true">I.G.</div>
- <div class="f"><b class="logo" style="color:#fff"><img src="logo.png" alt="" width="44" height="44"><span>I.G. Financial Advisor</span></b><span>Proprietor: Geetesh Laxmichand Lalchandani · GSTIN 24AITPL1647B1ZD</span></div>
+ <div class="f"><b class="logo" ><img src="logo.png" alt="" width="44" height="44"><span>I.G. Financial Advisor</span></b><span>Proprietor: Geetesh Laxmichand Lalchandani · GSTIN 24AITPL1647B1ZD</span></div>
  <p>Loan, insurance and credit card products are offered subject to the terms, eligibility and approval of the respective lenders and insurers. Please read all terms carefully. Information on this site is for general guidance only and is not a personalised recommendation.</p>
- <div style="margin-top:22px;color:#fff"><div class="soc"><a href="https://www.instagram.com/i.g.financial" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://youtube.com/@geeteshlalchandani" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/19gfzU2Kbc/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.300 0-3.8 1.400-3.800 3.900v2.300H7.900v3h2.600V21z"/></svg></a><a href="https://www.linkedin.com/in/ig-financial-advisor-7b8284437" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 8.8H2.1V21h3.1zM3.7 3.5a1.8 1.8 0 100 3.600 1.8 1.8 0 000-3.600zM21.900 21v-6.700c0-3.300-1.800-4.800-4.100-4.800-1.900 0-2.700 1-3.200 1.800V8.800h-3.100c0 .8 0 12.200 0 12.200h3.100v-6.800c0-.4 0-.7.100-1 .3-.7 1-1.400 2.100-1.400 1.500 0 2.100 1.100 2.100 2.800V21z"/></svg></a><a href="https://wa.me/919157861989" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.600-5A9 9 0 1 1 8 19.400z"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a></div></div>
+ <div style="margin-top:22px"><div class="soc"><a href="https://www.instagram.com/i.g.financial" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://youtube.com/@geeteshlalchandani" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a><a href="https://www.facebook.com/share/19gfzU2Kbc/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.300 0-3.8 1.400-3.800 3.900v2.300H7.900v3h2.600V21z"/></svg></a><a href="https://www.linkedin.com/in/ig-financial-advisor-7b8284437" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.2 8.8H2.1V21h3.1zM3.7 3.5a1.8 1.8 0 100 3.600 1.8 1.8 0 000-3.600zM21.900 21v-6.700c0-3.300-1.800-4.800-4.100-4.800-1.900 0-2.700 1-3.200 1.800V8.800h-3.100c0 .8 0 12.200 0 12.200h3.100v-6.800c0-.4 0-.7.100-1 .3-.7 1-1.400 2.100-1.400 1.500 0 2.100 1.100 2.100 2.800V21z"/></svg></a><a href="https://wa.me/919157861989" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.600-5A9 9 0 1 1 8 19.400z"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z" fill="currentColor" stroke="none"/></svg></a></div></div>
  <div class="ai"><span>Ask AI about us:</span><a href="https://chat.openai.com/?prompt=Tell%20me%20about%20I.G.%20Financial%20Advisor%2C%20a%20used%20car%20loan%20refinance%2C%20car%20insurance%2C%20personal%20and%20business%20loan%20and%20credit%20card%20advisory%20in%20Prahlad%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20run%20by%20Geetesh%20Lalchandani%20%28igfinancialadvisor.in%29.%20Summarize%20their%20services%2C%20how%20they%20work%20and%20why%20customers%20can%20trust%20them." target="_blank" rel="noopener" aria-label="ChatGPT" title="ChatGPT"><img src="ai/openai.svg" alt="" width="20" height="20"></a><a href="https://www.google.com/search?udm=50&q=Tell%20me%20about%20I.G.%20Financial%20Advisor%2C%20a%20used%20car%20loan%20refinance%2C%20car%20insurance%2C%20personal%20and%20business%20loan%20and%20credit%20card%20advisory%20in%20Prahlad%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20run%20by%20Geetesh%20Lalchandani%20%28igfinancialadvisor.in%29.%20Summarize%20their%20services%2C%20how%20they%20work%20and%20why%20customers%20can%20trust%20them." target="_blank" rel="noopener" aria-label="Google AI" title="Google AI"><img src="ai/google.svg" alt="" width="20" height="20"></a><a href="https://www.perplexity.ai/search?q=Tell%20me%20about%20I.G.%20Financial%20Advisor%2C%20a%20used%20car%20loan%20refinance%2C%20car%20insurance%2C%20personal%20and%20business%20loan%20and%20credit%20card%20advisory%20in%20Prahlad%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20run%20by%20Geetesh%20Lalchandani%20%28igfinancialadvisor.in%29.%20Summarize%20their%20services%2C%20how%20they%20work%20and%20why%20customers%20can%20trust%20them." target="_blank" rel="noopener" aria-label="Perplexity" title="Perplexity"><img src="ai/perplexity.svg" alt="" width="20" height="20"></a><a href="https://claude.ai/new?q=Tell%20me%20about%20I.G.%20Financial%20Advisor%2C%20a%20used%20car%20loan%20refinance%2C%20car%20insurance%2C%20personal%20and%20business%20loan%20and%20credit%20card%20advisory%20in%20Prahlad%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20run%20by%20Geetesh%20Lalchandani%20%28igfinancialadvisor.in%29.%20Summarize%20their%20services%2C%20how%20they%20work%20and%20why%20customers%20can%20trust%20them." target="_blank" rel="noopener" aria-label="Claude" title="Claude"><img src="ai/claude.svg" alt="" width="20" height="20"></a></div>
  <p>© <span id="y"></span> I.G. Financial Advisor, Ahmedabad.</p>
 </div></footer>
@@ -363,16 +342,11 @@ document.querySelectorAll('.rows,.steps,.cards2').forEach(g=>[...g.children].for
 const bar=document.getElementById('bar');
 addEventListener('scroll',()=>bar.style.transform=`scaleX(${scrollY/(document.documentElement.scrollHeight-innerHeight)})`,{passive:true});
 
-// dark/light page theme as you scroll (like the reference)
-const tio=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)document.body.classList.toggle('light',x.target.hasAttribute('data-light'))}),{rootMargin:'-45% 0px -45% 0px'});
-document.querySelectorAll('section').forEach(sec=>tio.observe(sec));
 // count-up
 const cio=new IntersectionObserver(e=>e.forEach(x=>{if(!x.isIntersecting)return;cio.unobserve(x.target);const to=+x.target.dataset.count,t0=performance.now();
  (function f(t){const p=Math.min((t-t0)/1400,1);x.target.textContent=Math.round(to*(1-Math.pow(1-p,3)));p<1&&requestAnimationFrame(f)})(t0)}),{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>{el.textContent=0;cio.observe(el)});
 if(rm)return;
-// card spotlight
-document.querySelectorAll('.s').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
 // hero cards parallax
 const st=document.querySelector('.stack');
 hero.addEventListener('pointermove',e=>{const x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);
@@ -456,7 +430,7 @@ const cards=defs.map(d=>{
  m.add(body,f,b);m.position.set(...d.pos);m.rotation.z=d.rz;m.userData={base:d.pos[1],o:{y:rm?0:-8,rx:rm?0:1.2}};
  group.add(m);return m});
 group.rotation.set(.12,-.3,0);
-function size(){const w=st.clientWidth,h=st.clientHeight;r.setSize(w,h);cam.aspect=w/h;cam.position.set(0,0,w/h<.9?11:8.6);cam.updateProjectionMatrix()}
+function size(){const w=st.clientWidth,h=st.clientHeight;r.setSize(w,h);cam.aspect=w/h;cam.position.set(0,-.5,w/h<.9?13:10.5);cam.updateProjectionMatrix()}
 // wait for fonts so card text uses Archivo
 new Promise(r=>LOGO.complete?r():(LOGO.onload=LOGO.onerror=r)).then(()=>document.fonts.load('900 100px Archivo')).then(()=>document.fonts.load('700 30px "Archivo Narrow"')).catch(()=>{}).then(()=>{
  // rebuild textures now that fonts are ready
